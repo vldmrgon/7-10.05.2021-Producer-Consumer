@@ -15,7 +15,6 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @Slf4j
 @Component
@@ -27,6 +26,7 @@ public class ConsumerApplication {
     public static Map<String, File> filesCache = new ConcurrentHashMap<>();
 
     public static void main(String[] args) {
+        log.info("START CONSUMER");
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext("com.naya.consumer");
         ConsumerApplication bean = context.getBean(ConsumerApplication.class);

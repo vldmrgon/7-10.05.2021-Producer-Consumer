@@ -22,7 +22,7 @@ public class ProducerApplication {
     private String library = "/home/dev/data/";
 
     public static void main(String[] args) {
-        log.info("START CONSUMER");
+        log.info("START PRODUCER");
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext("com.naya.producer");
         ProducerApplication bean = context.getBean(ProducerApplication.class);
