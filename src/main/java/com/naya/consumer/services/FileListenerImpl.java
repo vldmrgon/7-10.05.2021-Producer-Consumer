@@ -2,7 +2,6 @@ package com.naya.consumer.services;
 
 import com.naya.common.model.Quote;
 import com.naya.consumer.ConsumerApplication;
-import lombok.Setter;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
@@ -21,7 +20,7 @@ public class FileListenerImpl implements FileListener {
     public Quote searchNewFile(String path) {
         Quote quote = null;
 
-         Set<File> collect = Arrays
+        Set<File> collect = Arrays
                 .stream(Objects.requireNonNull(new File(path).listFiles()))
                 .collect(Collectors.toSet());
 
