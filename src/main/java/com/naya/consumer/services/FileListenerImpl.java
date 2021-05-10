@@ -21,7 +21,7 @@ public class FileListenerImpl implements FileListener {
     public Quote searchNewFile(String path) {
         Quote quote = null;
 
-        Set<File> collect = Arrays
+         Set<File> collect = Arrays
                 .stream(Objects.requireNonNull(new File(path).listFiles()))
                 .collect(Collectors.toSet());
 
